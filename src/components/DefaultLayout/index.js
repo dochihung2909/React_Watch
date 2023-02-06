@@ -8,9 +8,13 @@ const cx = classNames.bind(styles)
 function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
-            <Header />
-            <div className={cx('content')}>{children}</div>
-            <Footer />
+            <div className={cx('stopwatch-app')}>
+                <Header></Header>
+                <div className={cx('content')}>
+                    <div className={cx('watch')}>{children}</div>
+                </div>
+                <Footer />
+            </div>
         </div>
     )
 }
